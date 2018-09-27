@@ -606,7 +606,7 @@ def extract_javascript(fileobj, keywords, comment_tags, options):
 
                 if messages is not None:
                     yield (message_lineno, funcname, messages,
-                           [comment[1] for comment in translator_comments])
+                           [comment[1] for comment in translator_comments], ("javascript-format", ))
 
                 funcname = message_lineno = last_argument = None
                 concatenate_next = False
