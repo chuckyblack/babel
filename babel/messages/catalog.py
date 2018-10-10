@@ -99,6 +99,7 @@ class Message(object):
         self.string = string
         self.locations = list(distinct(locations))
         self.flags = set(flags)
+        self.determine_python_format()
 
         self.auto_comments = list(distinct(auto_comments))
         self.user_comments = list(distinct(user_comments))
